@@ -1,10 +1,7 @@
 import React from 'react';
 
-const Features = () => {
-    return <div>
+export default function Features() {
+    return <section className="features">
         features
-    </div>
-
+    </section>
 }
-
-export default Features

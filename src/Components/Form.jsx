@@ -1,18 +1,12 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { AppContext } from './AppContext';
 
-const Form = () => {
+export default function Form() {
+    const handleSubmit = () => { }
+    const handleChange = () => { }
 
-    const handleChange = e => { }
-
-    const handleSubmit = e => {
-        e.preventDefault();
-    }
-    return (
-        <form onSubmit={handleSubmit}>
-            <input type="text" onChange={() => handleChange} required="required" />
-            <button>Shorten it!</button>
-        </form>
-    )
+    return <form onSubmit={() => handleSubmit()}>
+        <input type="text" onChange={() => { handleChange() }} />
+        <input type="submit" value="Shorten it!" />
+    </form>
 }
-
-export default Form;

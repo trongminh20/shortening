@@ -1,13 +1,16 @@
 import React from 'react';
+import Navbar from './Navbar';
 import Header from './Header';
-import Form from './Form';
+import ListResult from './ListResults';
 import Statistics from './Statistics';
-const Home = () => {
+import Footer from './Footer';
+export default function Home() {
+
     return <>
+        <Navbar />
         <Header />
-        <Form />
+        <ListResult />
         <Statistics />
+        <Footer />
     </>
 }
-
-export default Home;

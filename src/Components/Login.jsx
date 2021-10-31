@@ -1,16 +1,12 @@
 import React from 'react';
 
-const Login = () => {
-    return <div>
-        <form >
-            <div className="login-info">
-                <input type="text" />
-                <input type="text" />
-            </div>
-            <button className="login-btn">Login</button>
+export default function Login() {
+    const handleChange = e => { }
+    const handleSubmit = e => { }
 
-        </form>
-    </div>
+    return <form className="login-form" onSubmit={() => handleSubmit}>
+        <input className="login-input" type="text" name="username" />
+        <input className="login-password" type="password" name="password" />
+        <input className="login-btn" type="submit" name="submit-login" value="Login" />
+    </form>
 }
-
-export default Login;
