@@ -11,8 +11,9 @@ export default function Shorten() {
     const dispatch = useDispatch();
     const { setResult } = bindActionCreators(actionsCreators, dispatch);
 
-
-    setResult(request);
+    useEffect(() => {
+        setResult(request);
+    })
 
     return <div>
         <p>{result}</p>

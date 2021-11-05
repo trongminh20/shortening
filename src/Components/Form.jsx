@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionsCreators } from '../States';
-
+import { formBgDesktop, formBgMobile } from './SVG-images';
 export default function Form() {
     const dispatch = useDispatch();
 
@@ -17,6 +17,7 @@ export default function Form() {
         e.preventDefault();
         shortenLink(input);
     }
+
 
     return <form onSubmit={handleSubmit}>
         <input type="text" onChange={handleChange} required />

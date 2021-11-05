@@ -1,11 +1,14 @@
 import React from 'react';
-// import { useSelector } from 'react-redux';
-
-import Shorten from './Components/Shorten';
+import { Switch, Route } from 'react-router-dom';
+import Footer from './Components/Footer';
+import Navbar from './Components/Navbar';
+import Home from './Components/Home';
 export default function App() {
-    // const request = useSelector(state => { return state.requestReducer });
-
     return <div>
-        <Shorten />
+        <Navbar />
+        <Switch>
+            <Route path="/" exact component={Home} />
+        </Switch>
+        <Footer />
     </div>
 }

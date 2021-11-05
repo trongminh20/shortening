@@ -15,3 +15,12 @@ export const setResult = res => {
         });
     }
 }
+
+export const setSttData = data => {
+    return dispatch => {
+        dispatch({
+            type: "SET_DATA",
+            data: data
+        });
+    }
+}
