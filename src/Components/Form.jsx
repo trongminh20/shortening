@@ -6,7 +6,7 @@ import { formBgDesktop, formBgMobile } from './SVG-images';
 export default function Form() {
     const dispatch = useDispatch();
 
-    const { shortenLink, } = bindActionCreators(actionsCreators, dispatch);
+    const { shortenLink } = bindActionCreators(actionsCreators, dispatch);
 
     let input = "";
 

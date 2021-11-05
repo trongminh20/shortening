@@ -1,0 +1,11 @@
+@mixin flexDisplay($direction, $gap, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    @if $direction == row or $direction == row-reverse {
+        column-gap: $gap;
+    } @else if $direction == column or $direction == column-reverse {
+        row-gap: $gap;
+    }
+    justify-content: $justify;
+    align-items: $align;
+}

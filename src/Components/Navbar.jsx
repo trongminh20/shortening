@@ -1,31 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { logo } from './SVG-images';
-
+import { handleMouseLeave, handleHover, btnMouseLeave, btnHover } from './mouseEvents';
 export default function Navbar() {
-    return <nav>
+
+    return <nav className="navbar">
         <Link to="/">
-            <div className="logo">
+            <div className="logo" >
                 {logo}
             </div>
         </Link>
         <div className="nav-menu">
             <Link to="/features">
-                <p>Features</p>
+                <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Features</p>
             </Link>
             <Link to="/pricing">
-                <p>Pricing</p>
+                <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Pricing</p>
             </Link>
             <Link to="/resources">
-                <p>Resouces</p>
+                <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Resouces</p>
             </Link>
         </div>
-        <div className="">
+        <div className="nav-btns">
             <Link to="/login">
-                <div>Login</div>
+                <button className="btn-login" onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Login</button>
             </Link>
             <Link to="/signup">
-                <button>Sign Up</button>
+                <button className="btn-signup" onMouseOver={btnHover} onMouseLeave={btnMouseLeave}>Sign Up</button>
             </Link>
         </div>
     </nav>

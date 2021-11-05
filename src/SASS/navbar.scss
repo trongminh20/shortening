@@ -1,0 +1,44 @@
+.navbar {
+    @include flexDisplay(row, 1.5rem, center, center);
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-menu {
+        @include flexDisplay(row, 1rem, flex-start, center);
+        width: 60%;
+        a {
+            text-decoration: none;
+            p {
+                color: $gray;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    .nav-btns {
+        width: 20%;
+        @include flexDisplay(row, 1rem, space-evenly, center);
+        .btn-login,
+        .btn-signup {
+            text-decoration: none;
+            font-weight: bolder;
+        }
+        .btn-login {
+            background: none;
+            border: none;
+            width: 50%;
+            font-weight: bolder;
+            color: $gray;
+        }
+        .btn-signup {
+            background: $cyan;
+            border: none;
+            width: 7vw;
+            height: 2rem;
+            border-radius: 15px;
+            color: white;
+        }
+    }
+}

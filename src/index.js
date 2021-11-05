@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-// import "./SASS/index.scss";
+import "./SASS/index.scss";
 import { Provider } from 'react-redux';
 import { store } from './States/store';
 

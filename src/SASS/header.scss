@@ -1,0 +1,16 @@
+.header {
+    @include flexDisplay(row, 1rem, space-between, center);
+    .header-intro {
+        @include flexDisplay(column, 1vw, flex-start, flex-start);
+        width: 60%;
+        .intro-title {
+            margin-bottom: 0px;
+            font-size: 3vw;
+        }
+        .intro-content {
+            font-size: 1vw;
+        }
+    }
+    .header-img {
+    }
+}

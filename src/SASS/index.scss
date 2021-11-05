@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import "./variables.scss";
+@import "./mixin.scss";
+@import "./navbar.scss";
+@import "./header.scss";
+@import "./shorten.scss";
+@import "./statistics.scss";
+@import "./footer.scss";
+
+body {
+    margin: unset;
+    padding: unset;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+}
+#root {
+    @include flexDisplay(column, 1rem, center, center);
+    @media (max-width: 799px) {
+        width: 90%;
+        margin: auto;
+    }
+    @media (min-width: 800px) {
+        width: 80%;
+        margin: auto;
+    }
+}
