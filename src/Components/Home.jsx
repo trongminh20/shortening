@@ -6,7 +6,6 @@ import Boost from './Boost';
 export default function Home() {
     return <>
         <Header />
-        <Shorten />
         <Statistic />
         <Boost />
     </>

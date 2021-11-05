@@ -1,44 +1,53 @@
 .navbar {
-    @include flexDisplay(row, 1.5rem, center, center);
+    @media (min-width: 800px) {
+        @include flexDisplay(row, 1.5rem, flex-start, center);
+    }
+
+    @media (max-width: 799px) {
+        @include flexDisplay(column, 1rem, center, center);
+    }
+    width: 100%;
     .logo {
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .nav-menu {
-        @include flexDisplay(row, 1rem, flex-start, center);
+        @media (min-width: 800px) {
+            @include flexDisplay(row, 1rem, flex-start, center);
+        }
+        @media (max-width: 799px) {
+            @include flexDisplay(column, 1rem, center, flex-start);
+        }
         width: 60%;
         a {
             text-decoration: none;
             p {
                 color: $gray;
-                font-weight: bolder;
+                font-weight: 500;
             }
         }
     }
-
     .nav-btns {
-        width: 20%;
-        @include flexDisplay(row, 1rem, space-evenly, center);
-        .btn-login,
-        .btn-signup {
-            text-decoration: none;
-            font-weight: bolder;
+        @media (min-width: 800px) {
+            @include flexDisplay(row, 1rem, center, center);
         }
-        .btn-login {
+        @media (max-width: 799px) {
+            @include flexDisplay(column, 1rem, center, flex-start);
+            width: 100%;
+        }
+        .login-btn {
             background: none;
             border: none;
-            width: 50%;
-            font-weight: bolder;
             color: $gray;
         }
-        .btn-signup {
-            background: $cyan;
-            border: none;
-            width: 7vw;
-            height: 2rem;
-            border-radius: 15px;
-            color: white;
+        .signup-btn {
+            @media (max-width: 799px) {
+                width: 100%;
+            }
+            @media (min-width: 800px) {
+                width: 7vw;
+            }
         }
     }
 }

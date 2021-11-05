@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { actionsCreators } from '../States';
 import { bindActionCreators } from 'redux';
 import StatisticItem from './StatisticsItem';
+import Shorten from './Shorten';
 export default function Statistic() {
     const sttData = useSelector(state => state.sttDataReducer);
     const dispatch = useDispatch();
@@ -23,6 +24,7 @@ export default function Statistic() {
     }, [])
 
     return <section>
+        <Shorten />
         <h1>Advance Statistics</h1>
         {
             Object.values(sttData).map(item => {

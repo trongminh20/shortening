@@ -23,10 +23,10 @@ export default function Navbar() {
         </div>
         <div className="nav-btns">
             <Link to="/login">
-                <button className="btn-login" onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Login</button>
+                <button className="btn login-btn" onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Login</button>
             </Link>
             <Link to="/signup">
-                <button className="btn-signup" onMouseOver={btnHover} onMouseLeave={btnMouseLeave}>Sign Up</button>
+                <button className="btn signup-btn" onMouseOver={btnHover} onMouseLeave={btnMouseLeave}>Sign Up</button>
             </Link>
         </div>
     </nav>

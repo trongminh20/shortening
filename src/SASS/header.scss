@@ -1,5 +1,8 @@
 .header {
     @include flexDisplay(row, 1rem, space-between, center);
+    @media (max-width: 799px) {
+        @include flexDisplay(column, 1rem, space-between, center);
+    }
     .header-intro {
         @include flexDisplay(column, 1vw, flex-start, flex-start);
         width: 60%;
