@@ -1,12 +1,9 @@
-@import "./sttItem.scss";
-
 .stt-block {
     background-color: $gray;
-    @include flexDisplay(column, 2vw, center, center);
+    @include flexDisplay(column, 2vw, flex-start, center);
     height: 100vh;
-
     margin-top: 20vh;
-
+    padding-bottom: 2rem;
     position: relative;
     .form-block {
         background-color: #3b3054;
@@ -59,15 +56,72 @@
                 height: 3rem;
             }
         }
-        .results {
-        }
     }
 
     .statistics {
-        @include flexDisplay(row, 2vw, center, center);
-    }
-    .stt-items {
-        width: 30%;
-        @include flexDisplay(column, 1vh, center, center);
+        @include flexDisplay(row, 1rem, flex-start, flex-start);
+        @media (min-width: 800px) {
+            width: 90%;
+        }
+        @media (min-width: 1000px) {
+            width: 80%;
+        }
+        position: relative;
+        margin: auto;
+        height: 50vh;
+        .stt-items {
+            background-color: white;
+            border-radius: 5px;
+            position: absolute;
+            width: 25%;
+            padding-bottom: 1rem;
+            .item-logos {
+                position: absolute;
+                bottom: 14rem;
+                left: 2rem;
+                width: 15%;
+                border: 15px solid $dark-violet;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $dark-violet;
+                img {
+                    width: 100%;
+                }
+            }
+            .item-info {
+                width: 80%;
+                margin: auto;
+                padding-top: 3rem;
+                p {
+                    font-size: 16px;
+                }
+            }
+            &::after {
+                content: "";
+                width: 5rem;
+                height: 10px;
+                background-color: $cyan;
+                position: absolute;
+                left: 100%;
+                top: 40%;
+            }
+        }
+        #brand-recognition {
+            top: -2rem;
+            left: 5%;
+        }
+        #detailed-records {
+            left: 35%;
+            top: 2rem;
+        }
+        #fully-customizable {
+            top: 5rem;
+            right: 10%;
+            &::after {
+                display: none;
+            }
+        }
     }
 }

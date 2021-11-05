@@ -1,11 +1,11 @@
 import React from 'react';
-import { logo } from './SVG-images';
+import { footerLogo } from './SVG-images';
 export default function Footer() {
-    return <footer>
-        <section className="footer-items">
-            {logo}
+    return <footer className="footer">
+        <section className="footer-logo">
+            {footerLogo}
         </section>
-        <section className="footer-items">
+        <section className="footer-sitebar">
             <div>
                 <h3>Features</h3>
                 <ul>
@@ -32,7 +32,7 @@ export default function Footer() {
                 </ul>
             </div>
         </section>
-        <section className="footer-items footer-socials">
+        <section className="footer-socials">
             <div>
                 <i className="fab fa-facebook-square"></i>
             </div>

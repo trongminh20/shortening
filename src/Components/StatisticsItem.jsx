@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function StatisticItem({ _logo, _title, _content }) {
+export default function StatisticItem({ _id, _logo, _title, _content }) {
 
-    return <article className="stt-items">
-        <img src={_logo} alt="" className="logo" />
-        <div>
-            <h1>{_title}</h1>
+    return <div id={_id} className="stt-items">
+        <div className="item-logos"><img src={_logo} alt="" /></div>
+        <div className="item-info">
+            <h3>{_title}</h3>
             <p>{_content}</p>
         </div>
-    </article>
+    </div>
 }

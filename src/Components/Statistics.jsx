@@ -32,7 +32,7 @@ export default function Statistic() {
 
             {
                 Object.values(sttData).map(item => {
-                    return <StatisticItem _logo={item.logo} _title={item.header} _content={item.content} />
+                    return <StatisticItem _id={item.header.replace(" ", "-").toLowerCase()} _logo={item.logo} _title={item.header} _content={item.content} />
                 })
             }
         </div>

@@ -1,0 +1,26 @@
+.footer {
+    background-color: $darker-violet;
+    @include flexDisplay(row, 1rem, space-evenly, flex-start);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .footer-logo {
+        margin-top: 3rem;
+    }
+    .footer-sitebar {
+        @include flexDisplay(row, 3vw, space-evenly, flex-start);
+        margin-top: 1.5rem;
+        color: white;
+        div ul {
+            padding-left: 0;
+            li {
+                list-style: none;
+                color: $gray;
+            }
+        }
+    }
+    .footer-socials {
+        margin-top: 3rem;
+        @include flexDisplay(row, 1rem, flex-start, flex-start);
+        color: white;
+    }
+}
