@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionsCreators } from '../States';
 import Form from './Form';
+import { formBgDesktop, formBgMobile } from './SVG-images';
 
 export default function Shorten() {
     const result = useSelector(state => { return state.resultReducer });
@@ -16,7 +17,12 @@ export default function Shorten() {
     })
 
     return <div>
-        <p>{result}</p>
-        <Form />
+        <div className="form-block">
+            <img className="form-bg" src="./images/bg-shorten-desktop.svg" alt="" />
+            <Form />
+        </div>
+        <div className="results">
+            <p>{result}</p>
+        </div>
     </div>
 }

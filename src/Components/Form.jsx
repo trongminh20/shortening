@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionsCreators } from '../States';
 import { formBgDesktop, formBgMobile } from './SVG-images';
+import { btnHover, btnMouseLeave } from './mouseEvents';
 export default function Form() {
     const dispatch = useDispatch();
 
@@ -18,9 +19,8 @@ export default function Form() {
         shortenLink(input);
     }
 
-
-    return <form onSubmit={handleSubmit}>
-        <input type="text" onChange={handleChange} required />
-        <button type="submit">Submit</button>
+    return <form className="form" onSubmit={handleSubmit}>
+        <input className="form-input" type="text" onChange={handleChange} required />
+        <button className="btn form-btn" type="submit" onMouseLeave={btnMouseLeave} onMouseOver={btnHover}>Submit</button>
     </form >
 }

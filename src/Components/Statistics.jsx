@@ -23,13 +23,18 @@ export default function Statistic() {
         getData();
     }, [])
 
-    return <section>
-        <Shorten />
+    return <section className="stt-block" >
+        <div className="shorten">
+            <Shorten />
+        </div>
         <h1>Advance Statistics</h1>
-        {
-            Object.values(sttData).map(item => {
-                return <StatisticItem _logo={item.logo} _title={item.header} _content={item.content} />
-            })
-        }
+        <div className="statistics">
+
+            {
+                Object.values(sttData).map(item => {
+                    return <StatisticItem _logo={item.logo} _title={item.header} _content={item.content} />
+                })
+            }
+        </div>
     </section>
 }

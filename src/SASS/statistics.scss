@@ -1,1 +1,73 @@
 @import "./sttItem.scss";
+
+.stt-block {
+    background-color: $gray;
+    @include flexDisplay(column, 2vw, center, center);
+    height: 100vh;
+
+    margin-top: 20vh;
+
+    position: relative;
+    .form-block {
+        background-color: #3b3054;
+        height: 20vh;
+        position: absolute;
+        left: 10%;
+        top: -10vh;
+        @include flexDisplay(column, 1rem, center, center);
+        border-radius: 5px;
+        @media (min-width: 800px) {
+            width: 80%;
+        }
+        @media (max-width: 799px) {
+            width: 100%;
+        }
+        .form-bg {
+            z-index: 1;
+            position: absolute;
+            height: 20vh;
+            width: 100%;
+            border-radius: 5px;
+        }
+        .form {
+            z-index: 5;
+            @media (min-width: 800px) {
+                @include flexDisplay(row, 1rem, center, center);
+                width: 80%;
+            }
+            @media (max-width: 799px) {
+                @include flexDisplay(column, 1rem, center, center);
+            }
+            .form-input {
+                @media (max-width: 799px) {
+                    width: 100%;
+                }
+                @media (min-width: 800px) {
+                    width: 80%;
+                }
+                height: 3rem;
+                border: none;
+                border-radius: 5px;
+            }
+            .form-btn {
+                @media (min-width: 800px) {
+                    width: 10vw;
+                }
+                @media (max-width: 799px) {
+                    width: 100%;
+                }
+                height: 3rem;
+            }
+        }
+        .results {
+        }
+    }
+
+    .statistics {
+        @include flexDisplay(row, 2vw, center, center);
+    }
+    .stt-items {
+        width: 30%;
+        @include flexDisplay(column, 1vh, center, center);
+    }
+}

@@ -1,11 +1,29 @@
 .header {
-    @include flexDisplay(row, 1rem, space-between, center);
-    @media (max-width: 799px) {
-        @include flexDisplay(column, 1rem, space-between, center);
+    @include flexDisplay(row, 5vw, space-between, center);
+    width: 80%;
+    @media (min-width: 800px) {
+        width: 90%;
     }
+    @media (min-width: 1000px) {
+        width: 80%;
+    }
+    @media (max-width: 799px) {
+        @include flexDisplay(column, 1vh, space-between, center);
+    }
+
+    margin: auto;
+    overflow: hidden;
     .header-intro {
         @include flexDisplay(column, 1vw, flex-start, flex-start);
-        width: 60%;
+        @media (min-width: 800px) {
+            width: 30%;
+        }
+        @media (min-width: 1000px) {
+            width: 40%;
+        }
+        @media (max-width: 799px) {
+            width: 100%;
+        }
         .intro-title {
             margin-bottom: 0px;
             font-size: 3vw;
@@ -15,5 +33,12 @@
         }
     }
     .header-img {
+        width: 70%;
+        @media (max-width: 799px) {
+            width: 100%;
+        }
+        @media (min-width: 1000px) {
+            width: 60%;
+        }
     }
 }
