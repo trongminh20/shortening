@@ -1,9 +1,9 @@
 # Shorten link with Shorten API
 ### live demo
-
+- https://minhphan-shorten-link.netlify.app/
 ## tasks
 - build components [x]
-- setup routing []
+- setup routing [x]
 - test api [x]
 - styling []
 - combining form input -> send to API []
