@@ -1,15 +1,15 @@
-import React, { useCallback, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { actionsCreators } from '../States';
-import { formBgDesktop, formBgMobile } from './SVG-images';
+
 import { btnHover, btnMouseLeave } from './mouseEvents';
 import { useSelector } from 'react-redux';
 export default function Form() {
     const dispatch = useDispatch();
     const request = useSelector(state => state.requestReducer);
     const { shortenLink, setResult } = bindActionCreators(actionsCreators, dispatch);
-
+    const [bg, setBg] = useState("");
     let input = "";
 
     const handleChange = e => {
@@ -21,6 +21,7 @@ export default function Form() {
         shortenLink(input);
     }
 
+    //fetching data from shortening api
     const fetchData = () => {
         fetch(`https://api.shrtco.de/v2/shorten?url=${request}`)
             .then(res => {
@@ -33,15 +34,26 @@ export default function Form() {
             }).then(data => {
                 setResult(data);
             });
-
     }
-
+    const setFormBg = () => {
+        if (window.innerWidth < 800) {
+            setBg("./images/bg-shorten-mobile.svg");
+        } else if (window.innerWidth >= 800) {
+            setBg("./images/bg-shorten-desktop.svg");
+        }
+    }
     useEffect(() => {
         fetchData();
     }, [request])
-
-    return <form className="form" onSubmit={handleSubmit}>
-        <input className="form-input" type="text" onChange={handleChange} required />
-        <button className="btn form-btn" type="submit" onMouseLeave={btnMouseLeave} onMouseOver={btnHover}>Submit</button>
-    </form >
+    useEffect(() => {
+        window.addEventListener('resize', setFormBg());
+        return window.removeEventListener('resize', setFormBg());
+    }, [])
+    return <div className="form-block">
+        <img className="form-bg" src={bg} alt="" />
+        <form className="form" onSubmit={handleSubmit}>
+            <input className="form-input" type="text" onChange={handleChange} required />
+            <button className="btn form-btn" type="submit" onMouseLeave={btnMouseLeave} onMouseOver={btnHover}>Submit</button>
+        </form >
+    </div>
 }

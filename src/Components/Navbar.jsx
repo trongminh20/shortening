@@ -10,24 +10,29 @@ export default function Navbar() {
                 {logo}
             </div>
         </Link>
-        <div className="nav-menu">
-            <Link to="/features">
-                <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Features</p>
-            </Link>
-            <Link to="/pricing">
-                <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Pricing</p>
-            </Link>
-            <Link to="/resources">
-                <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Resouces</p>
-            </Link>
+        <div className="nav">
+            <div className="nav-menu">
+                <Link to="/features">
+                    <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Features</p>
+                </Link>
+                <Link to="/pricing">
+                    <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Pricing</p>
+                </Link>
+                <Link to="/resources">
+                    <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Resouces</p>
+                </Link>
+            </div>
+            <div className="nav-btns">
+                <Link to="/login">
+                    <button className="btn login-btn" onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Login</button>
+                </Link>
+                <Link to="/signup">
+                    <button className="btn signup-btn" onMouseOver={btnHover} onMouseLeave={btnMouseLeave}>Sign Up</button>
+                </Link>
+            </div>
         </div>
-        <div className="nav-btns">
-            <Link to="/login">
-                <button className="btn login-btn" onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Login</button>
-            </Link>
-            <Link to="/signup">
-                <button className="btn signup-btn" onMouseOver={btnHover} onMouseLeave={btnMouseLeave}>Sign Up</button>
-            </Link>
+        <div className="responsive-btn">
+            <i className="fas fa-bars"></i>
         </div>
     </nav>
 }

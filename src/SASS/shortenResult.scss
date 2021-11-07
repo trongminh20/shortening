@@ -1,0 +1,38 @@
+.result-list {
+    width: 100%;
+    @include flexDisplay(column, 10px, space-evenly, center);
+}
+
+.result-item {
+    background-color: white;
+    width: 95%;
+    border-radius: 10px;
+    @media (max-width: 799px) {
+        @include flexDisplay(column, 0, space-evenly, center);
+        padding-bottom: 1rem;
+    }
+}
+.original-link,
+.shorten-link {
+    @media (max-width: 799px) {
+        width: 100%;
+    }
+}
+.original-link {
+    @media (max-width: 799px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom: 1px solid $gray;
+    }
+}
+.shorten-link {
+    color: $cyan;
+    font-size: 1.5rem;
+    @media (max-width: 799px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}

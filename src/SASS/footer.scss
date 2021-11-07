@@ -1,26 +1,29 @@
 .footer {
     background-color: $darker-violet;
-    @include flexDisplay(row, 1rem, space-evenly, flex-start);
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    .footer-logo {
-        margin-top: 3rem;
+    @include flexDisplay(column, 1rem, center, center);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    .footer-sitebar,
+    .footer-socials {
+        width: 100%;
     }
     .footer-sitebar {
-        @include flexDisplay(row, 3vw, space-evenly, flex-start);
-        margin-top: 1.5rem;
         color: white;
-        div ul {
-            padding-left: 0;
-            li {
-                list-style: none;
-                color: $gray;
+        h3 {
+            text-align: center;
+            font-weight: bolder;
+        }
+        div {
+            @media (max-width: 799px) {
+                @include flexDisplay(column, 5px, center, center);
+                div {
+                    color: $gray;
+                }
             }
         }
     }
     .footer-socials {
-        margin-top: 3rem;
-        @include flexDisplay(row, 1rem, flex-start, flex-start);
+        @include flexDisplay(row, 1rem, center, center);
         color: white;
     }
 }

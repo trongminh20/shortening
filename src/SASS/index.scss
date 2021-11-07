@@ -1,20 +1,17 @@
+// typo
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+//components styling
 @import "./variables.scss";
 @import "./mixin.scss";
+@import "./buttons.scss";
 @import "./navbar.scss";
 @import "./header.scss";
-@import "./shorten.scss";
-@import "./statistics.scss";
 @import "./footer.scss";
-@import "./buttons.scss";
-@import "./boost.scss";
-
+@import "./form.scss";
+@import "./statistics.scss";
+@import "./shortenResult.scss";
+//root styling
 body {
-    margin: unset;
-    padding: unset;
     font-family: "Poppins", sans-serif;
-    font-size: 18px;
-}
-#root {
-    @include flexDisplay(column, 1rem, center, center);
+    // font-size: 18px;
 }

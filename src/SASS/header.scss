@@ -1,44 +1,44 @@
 .header {
-    @include flexDisplay(row, 5vw, space-between, center);
-    width: 80%;
+    width: 90%;
+    margin: auto;
     @media (min-width: 800px) {
-        width: 90%;
-    }
-    @media (min-width: 1000px) {
-        width: 80%;
-    }
-    @media (max-width: 799px) {
-        @include flexDisplay(column, 1vh, space-between, center);
+        @include flexDisplay(row, 1vw, flex-start, center);
+        margin-top: 5%;
     }
 
-    margin: auto;
-    overflow: hidden;
-    .header-intro {
-        @include flexDisplay(column, 1vw, flex-start, flex-start);
-        @media (min-width: 800px) {
-            width: 30%;
-        }
-        @media (min-width: 1000px) {
-            width: 40%;
-        }
+    @media (max-width: 799px) {
+        @include flexDisplay(column-reverse, 1vh, center, center);
+    }
+
+    .header-intro,
+    .header-img {
         @media (max-width: 799px) {
             width: 100%;
         }
+    }
+    .header-intro {
+        @media (max-width: 799px) {
+            @include flexDisplay(column, 1rem, center, center);
+        }
         .intro-title {
-            margin-bottom: 0px;
-            font-size: 3vw;
+            @media (max-width: 799px) {
+                text-align: center;
+                font-size: 3rem;
+                margin-bottom: unset;
+            }
         }
         .intro-content {
-            font-size: 1vw;
+            @media (max-width: 799px) {
+                text-align: center;
+                font-size: 1rem;
+            }
         }
     }
     .header-img {
-        width: 70%;
-        @media (max-width: 799px) {
-            width: 100%;
-        }
-        @media (min-width: 1000px) {
-            width: 60%;
+        img {
+            @media (max-width: 799px) {
+                width: 100%;
+            }
         }
     }
 }

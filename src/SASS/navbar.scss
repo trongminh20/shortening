@@ -1,57 +1,50 @@
 .navbar {
-    @media (min-width: 800px) {
-        @include flexDisplay(row, 1.5rem, flex-start, center);
-        width: 90%;
-    }
-    @media (min-width: 1000px) {
-        width: 80%;
-    }
+    @include flexDisplay(row, 1vw, flex-start, center);
+    height: 3rem;
+    background-color: white;
     @media (max-width: 799px) {
-        @include flexDisplay(column, 1rem, center, center);
+        @include flexDisplay(row, 0, space-between, center);
     }
-    width: 80%;
+    width: 90%;
     margin: auto;
     .logo {
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
     }
-    .nav-menu {
+    .nav {
         @media (min-width: 800px) {
-            @include flexDisplay(row, 1rem, flex-start, center);
+            @include flexDisplay(row, "", space-between, center);
+            width: 80%;
         }
+
         @media (max-width: 799px) {
-            @include flexDisplay(column, 1rem, center, flex-start);
+            display: none;
         }
-        width: 60%;
-        a {
-            text-decoration: none;
-            p {
-                color: $gray;
-                font-weight: 500;
+        .nav-menu {
+            @media (min-width: 800px) {
+                width: 70%;
+                @include flexDisplay(row, 1rem, flex-start, center);
             }
-        }
-    }
-    .nav-btns {
-        @media (min-width: 800px) {
-            @include flexDisplay(row, 1rem, center, center);
-        }
-        @media (max-width: 799px) {
-            @include flexDisplay(column, 1rem, center, flex-start);
-            width: 100%;
-        }
-        .login-btn {
-            background: none;
-            border: none;
-            color: $gray;
-        }
-        .signup-btn {
+
             @media (max-width: 799px) {
+                @include flexDisplay(column, 1rem, center, center);
                 width: 100%;
             }
+        }
+        .nav-btns {
             @media (min-width: 800px) {
-                width: 7vw;
+                width: 30%;
+                @include flexDisplay(row, 1rem, center, center);
             }
+        }
+    }
+    .responsive-btn {
+        @media (min-width: 800px) {
+            display: none;
+        }
+        @media (max-width: 799px) {
+            display: flex;
         }
     }
 }

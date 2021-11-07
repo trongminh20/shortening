@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderImg } from './SVG-images';
+// import { HeaderImg } from './SVG-images';
 import { btnHover, btnMouseLeave } from './mouseEvents';
 export default function Header() {
     return <header className="header">
@@ -8,10 +8,10 @@ export default function Header() {
             <p className="intro-content">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, sint! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat, magni?
             </p>
-            <button className="btn" onMouseLeave={btnMouseLeave} onMouseOver={btnHover}>Get Started</button>
+            <button className="btn header-btn" onMouseLeave={btnMouseLeave} onMouseOver={btnHover}>Get Started</button>
         </section>
         <section className="header-img">
-            {HeaderImg}
+            <img src="./images/illustration-working.svg" alt="" />
         </section>
     </header>
 }

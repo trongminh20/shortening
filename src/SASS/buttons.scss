@@ -6,3 +6,27 @@
     color: white;
     font-weight: bolder;
 }
+.header-btn {
+    @media (max-width: 799px) {
+        width: 75%;
+        height: 3rem;
+        font-size: 1.5rem;
+        border-radius: 25px;
+    }
+}
+.form-btn {
+    @media (max-width: 799px) {
+        width: 90%;
+        height: 3rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+    }
+}
+
+.btn-copy {
+    @media (max-width: 799px) {
+        width: 90%;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}
