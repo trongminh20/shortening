@@ -1,7 +1,7 @@
-const resultReducer = (resultState = "", action) => {
+const resultReducer = (resultState = [], action) => {
     switch (action.type) {
         case "RECEIVED":
-            return action.result;
+            return [...resultState, action.result]
             break;
         default:
             return resultState;

@@ -1,3 +1,4 @@
+//received input link and set it to requestState
 export const shortenLink = link => {
     return dispatch => {
         dispatch({
@@ -6,7 +7,7 @@ export const shortenLink = link => {
         });
     }
 }
-
+//set fetched data to resultState in resultReducer
 export const setResult = res => {
     return dispatch => {
         dispatch({
@@ -16,6 +17,9 @@ export const setResult = res => {
     }
 }
 
+//set data from data.json to Advance Statistic block
+// this is not neccessary in the reality. 
+//just for practice fetching and hadnle data.json
 export const setSttData = data => {
     return dispatch => {
         dispatch({
