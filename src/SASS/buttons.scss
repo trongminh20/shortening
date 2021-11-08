@@ -7,25 +7,38 @@
     font-weight: bolder;
 }
 .signup-btn {
+    font-size: 1.5rem;
     @media (max-width: 799px) {
-        width: 100%;
+        width: 80%;
+        height: 3rem;
     }
     @media (min-width: 800px) {
-        width: 5rem;
+        width: 10rem;
+        height: 3rem;
+        border-radius: 25px;
     }
 }
 .header-btn {
+    height: 3rem;
+    font-size: 1.5rem;
+    border-radius: 25px;
     @media (max-width: 799px) {
         width: 75%;
-        height: 3rem;
-        font-size: 1.5rem;
-        border-radius: 25px;
+    }
+    @media (min-width: 800px) {
+        width: 25%;
     }
 }
 .form-btn {
     @media (max-width: 799px) {
         width: 90%;
         height: 3rem;
+        font-size: 1.5rem;
+        border-radius: 10px;
+    }
+    @media (min-width: 800px) {
+        height: 3rem;
+        width: 10rem;
         font-size: 1.5rem;
         border-radius: 10px;
     }
@@ -37,11 +50,23 @@
         height: 3rem;
         font-size: 1.5rem;
     }
+    @media (min-width: 800px) {
+        width: 50%;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
 }
 
 .boost-btn {
     @media (max-width: 799px) {
         width: 50%;
+        height: 3rem;
+        font-weight: bolder;
+        font-size: 1rem;
+        border-radius: 25px;
+    }
+    @media (min-width: 800px) {
+        width: 10%;
         height: 3rem;
         font-weight: bolder;
         font-size: 1rem;

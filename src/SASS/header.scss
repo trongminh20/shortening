@@ -1,5 +1,5 @@
 .header {
-    width: 90%;
+    width: 80%;
     margin: auto;
     @media (min-width: 800px) {
         @include flexDisplay(row, 1vw, flex-start, center);
@@ -15,22 +15,32 @@
         @media (max-width: 799px) {
             width: 100%;
         }
+        @media (min-width: 800px) {
+            width: 50%;
+        }
     }
     .header-intro {
         @media (max-width: 799px) {
             @include flexDisplay(column, 1rem, center, center);
         }
         .intro-title {
+            margin-bottom: unset;
             @media (max-width: 799px) {
                 text-align: center;
                 font-size: 3rem;
-                margin-bottom: unset;
+            }
+            @media (min-width: 800px) {
+                font-size: 5rem;
             }
         }
         .intro-content {
             @media (max-width: 799px) {
                 text-align: center;
                 font-size: 1rem;
+            }
+            @media (min-width: 800px) {
+                width: 70%;
+                font-size: 1.5rem;
             }
         }
     }

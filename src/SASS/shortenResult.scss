@@ -5,11 +5,15 @@
 
 .result-item {
     background-color: white;
-    width: 95%;
     border-radius: 10px;
     @media (max-width: 799px) {
         @include flexDisplay(column, 0, space-evenly, center);
         padding-bottom: 1rem;
+        width: 95%;
+    }
+    @media (min-width: 800px) {
+        @include flexDisplay(row, 0, space-between, center);
+        width: 80%;
     }
 }
 .original-link,
@@ -25,6 +29,10 @@
         align-items: center;
         border-bottom: 1px solid $gray;
     }
+    @media (min-width: 800px) {
+        margin-left: 3rem;
+        font-size: 1.5rem;
+    }
 }
 .shorten-link {
     color: $cyan;
@@ -34,5 +42,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+    }
+    @media (min-width: 800px) {
+        @include flexDisplay(row, 1rem, space-evenly, center);
+        padding-right: 1rem;
+        width: 30%;
     }
 }

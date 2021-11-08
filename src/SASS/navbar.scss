@@ -1,12 +1,18 @@
 .navbar {
-    @include flexDisplay(row, 1vw, flex-start, center);
     height: 3rem;
     background-color: white;
+    margin: auto;
     @media (max-width: 799px) {
         @include flexDisplay(row, 0, space-between, center);
+        width: 90%;
     }
-    width: 90%;
-    margin: auto;
+    @media (min-width: 800px) {
+        @include flexDisplay(row, 1vw, flex-start, center);
+        width: 100%;
+        height: 5rem;
+        padding-left: 10vw;
+    }
+
     .logo {
         display: flex;
         align-items: center;
@@ -26,9 +32,18 @@
             position: absolute;
             top: 4rem;
             border-radius: 5px;
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
         }
         .nav-menu {
+            a {
+                text-decoration: none;
+                color: $gray;
+                font-weight: bolder;
+                font-size: 1.5rem;
+                @media (max-width: 799px) {
+                    color: white;
+                }
+            }
             @media (min-width: 800px) {
                 width: 70%;
                 @include flexDisplay(row, 1rem, flex-start, center);
@@ -39,44 +54,36 @@
                 width: 80%;
                 border-bottom: 1px solid $gray;
             }
-            a {
-                text-decoration: none;
-                color: $gray;
-                font-weight: bolder;
-                @media (max-width: 799px) {
-                    color: white;
-                }
-            }
         }
         .nav-btns {
-            @media (min-width: 800px) {
-                width: 30%;
-                @include flexDisplay(row, 1rem, center, center);
-            }
-            @media (max-width: 799px) {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-            }
             a {
                 text-decoration: none;
                 color: $gray;
                 font-weight: bolder;
                 @media (max-width: 799px) {
                     width: 90%;
+                    @include flexDisplay(column, 1rem, center, center);
                 }
                 .login-btn {
                     text-align: center;
+                    font-size: 1.5rem;
                     @media (max-width: 799px) {
                         color: white;
                     }
                 }
             }
+            @media (min-width: 800px) {
+                width: 30%;
+                @include flexDisplay(row, 1rem, center, center);
+            }
+            @media (max-width: 799px) {
+                width: 100%;
+                @include flexDisplay(column, 1rem, center, center);
+            }
         }
     }
     .responsive-btn {
+        font-size: 2rem;
         @media (min-width: 800px) {
             display: none;
         }

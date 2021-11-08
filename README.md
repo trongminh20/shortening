@@ -11,6 +11,6 @@
 - test api [x]
 - styling desktop [x]
 - styling mobile [x]
-- combining form input -> send to API []
-- listing results []
+- combining form input -> send to API [x]
+- listing results [x]
 - build sub-pages []

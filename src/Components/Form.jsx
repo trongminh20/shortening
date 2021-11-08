@@ -45,9 +45,12 @@ export default function Form() {
     useEffect(() => {
         fetchData();
     }, [request])
+
     useEffect(() => {
         window.addEventListener('resize', setFormBg());
-        return window.removeEventListener('resize', setFormBg());
+        return () => {
+            window.removeEventListener('resize', setFormBg());
+        }
     }, [])
     return <div className="form-block">
         <img className="form-bg" src={bg} alt="" />

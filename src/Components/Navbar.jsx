@@ -18,11 +18,18 @@ export default function Navbar() {
     const handleResponsiveNav = () => {
         if (window.innerWidth < 800) {
             document.getElementById('nav').style.display = "none";
-        } else if (window.innerWidth >= 800) {
+        }
+        if (window.innerWidth >= 800) {
             document.getElementById('nav').style.display = "flex";
         }
     }
-
+    useEffect(() => {
+        window.addEventListener("resize", function () {
+            if (window.innerWidth >= 800) {
+                document.getElementById('nav').style.display = "flex";
+            }
+        })
+    })
     useEffect(() => {
         window.addEventListener('resize', handleResponsiveNav());
         return () => {

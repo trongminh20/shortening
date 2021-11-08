@@ -1,68 +1,139 @@
 .stt-block {
     background-color: $gray;
     position: relative;
-    margin-top: 45%;
-    padding-top: 35%;
+    @media (max-width: 799px) {
+        margin-top: 45%;
+        padding-top: 35%;
+    }
+    @media (min-width: 800px) {
+        margin-top: 15%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+    }
     .input-link {
         position: absolute;
+        top: -80px;
+        @media (min-width: 800px) {
+            left: 10%;
+            width: 90%;
+        }
         @media (max-width: 799px) {
             width: 100%;
-            top: -80px;
             left: 5%;
         }
     }
 
     .statistics {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
         @media (max-width: 799px) {
-            @include flexDisplay(column, 100px, center, center);
+            row-gap: 100px;
+            padding-bottom: 15rem;
         }
-        padding-bottom: 5rem;
+        @media (min-width: 800px) {
+            row-gap: 2rem;
+            padding-bottom: 5rem;
+        }
+        .block-title {
+            h1 {
+                @media (min-width: 800px) {
+                    font-size: 3rem;
+                }
+                @media (max-width: 799px) {
+                    font-size: 2rem;
+                }
+                text-align: center;
+            }
+        }
+        .stt-items-list {
+            width: 100%;
+            @media (max-width: 799px) {
+                @include flexDisplay(column, 0, center, center);
+            }
+            @media (min-width: 800px) {
+                @include flexDisplay(row, 50px, center, center);
+            }
+        }
         .stt-items {
+            background-color: white;
+            border-radius: 15px;
+            position: relative;
             @media (max-width: 799px) {
                 @include flexDisplay(column, 0, space-evenly, center);
+                width: 95%;
+                height: 30vh;
             }
-            background-color: white;
-            width: 95%;
-            height: 30vh;
+            @media (min-width: 800px) {
+                padding-top: 2rem;
+            }
             @media screen and (max-width: 375px) {
                 height: 50vh;
             }
-            border-radius: 15px;
-            position: relative;
-
+            @media screen and (min-width: 800px) and (min-width: 1000px) {
+                width: 20%;
+                height: 30vh;
+            }
             .item-logos {
                 background-color: $dark-violet;
                 position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
                 @media only screen and (min-width: 376px) and (max-width: 799px) {
                     width: 100px;
                     height: 100px;
                     top: -45px;
+                }
+                @media only screen and (min-width: 800px) {
+                    width: 5rem;
+                    height: 5rem;
+                    top: -40px;
+                    left: 2rem;
                 }
                 @media only screen and (max-width: 375px) {
                     width: 70px;
                     height: 70px;
                     top: -45px;
                 }
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                border-radius: 50%;
                 img {
                     width: 60%;
                 }
             }
 
             .item-info {
-                @include flexDisplay(column, 0, flex-start, center);
+                @include flexDisplay(column, 0, flex-start, flex-start);
+                @media (max-width: 799px) {
+                    align-items: center;
+                }
                 @media screen and (max-width: 375px) {
                     margin-top: 2vw;
                 }
+                @media screen and (min-width: 800px) {
+                    margin-top: 2vw;
+                    margin-left: 2rem;
+                }
                 p {
                     width: 70%;
-                    text-align: center;
+                    font-size: 1rem;
+                    @media (max-width: 799px) {
+                        text-align: center;
+                    }
                 }
             }
         }
+        #brand-recognition {
+        }
+        #detailed-records {
+            top: 5rem;
+        }
+        #fully-customizable {
+            top: 10rem;
+        }
+
         #detailed-records::after,
         #brand-recognition::after {
             content: "";
@@ -72,6 +143,18 @@
                 height: 60px;
                 bottom: -60px;
                 background-color: $cyan;
+            }
+            @media (min-width: 800px) {
+                width: 60px;
+                height: 10px;
+                right: -60px;
+                bottom: 5rem;
+                background-color: $cyan;
+            }
+        }
+        #detailed-records::after {
+            @media (min-width: 800px) {
+                bottom: 10rem;
             }
         }
     }

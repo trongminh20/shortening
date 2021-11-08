@@ -31,16 +31,18 @@ export default function Statistic() {
         <div className="input-link">
             <Form />
         </div>
-
         <Shorten />
-
         <div className="statistics">
-            <h1>Advance Statistics</h1>
-            {
-                Object.values(sttData).map(item => {
-                    return <StatisticItem _id={item.header.replace(" ", "-").toLowerCase()} _logo={item.logo} _title={item.header} _content={item.content} />
-                })
-            }
+            <div className="block-title">
+                <h1>Advance Statistics</h1>
+            </div>
+            <div className="stt-items-list">
+                {
+                    Object.values(sttData).map(item => {
+                        return <StatisticItem _id={item.header.replace(" ", "-").toLowerCase()} _logo={item.logo} _title={item.header} _content={item.content} />
+                    })
+                }
+            </div>
         </div>
     </section>
 }

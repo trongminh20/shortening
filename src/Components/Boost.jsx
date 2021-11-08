@@ -11,9 +11,9 @@ export default function Boost() {
         }
     }
     useEffect(() => {
-        window.addEventListener('resize', setBackground());
+        window.addEventListener("resize", setBackground());
         return () => {
-            window.removeEventListener('resize', setBackground());
+            window.removeEventListener("resize", setBackground());
         }
     }, [])
     return <section className="boost">
