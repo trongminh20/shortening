@@ -55,7 +55,7 @@ export default function Form() {
     return <div className="form-block">
         <img className="form-bg" src={bg} alt="" />
         <form className="form" onSubmit={handleSubmit}>
-            <input className="form-input" type="text" onChange={handleChange} required />
+            <input className="form-input" type="text" onChange={handleChange} placeholder="Shorten a link here" required />
             <button className="btn form-btn" type="submit" onMouseLeave={btnMouseLeave} onMouseOver={btnHover}>Submit</button>
         </form >
     </div>
