@@ -1,0 +1,23 @@
+.boost {
+    background-color: $dark-violet;
+    position: relative;
+    @media (max-width: 799px) {
+        width: 100%;
+        height: 35vh;
+    }
+    .boost-bg {
+        width: 100%;
+        height: 100%;
+    }
+    .boost-info {
+        width: 100%;
+        position: absolute;
+        @include flexDisplay(column, 1rem, center, center);
+        h1 {
+            color: white;
+        }
+        @media (max-width: 799px) {
+            top: 30%;
+        }
+    }
+}

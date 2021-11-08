@@ -24,15 +24,23 @@
             background-color: white;
             width: 95%;
             height: 30vh;
+            @media screen and (max-width: 375px) {
+                height: 50vh;
+            }
             border-radius: 15px;
             position: relative;
 
             .item-logos {
                 background-color: $dark-violet;
                 position: absolute;
-                @media (max-width: 799px) {
+                @media only screen and (min-width: 376px) and (max-width: 799px) {
                     width: 100px;
                     height: 100px;
+                    top: -45px;
+                }
+                @media only screen and (max-width: 375px) {
+                    width: 70px;
+                    height: 70px;
                     top: -45px;
                 }
                 display: flex;
@@ -46,6 +54,9 @@
 
             .item-info {
                 @include flexDisplay(column, 0, flex-start, center);
+                @media screen and (max-width: 375px) {
+                    margin-top: 2vw;
+                }
                 p {
                     width: 70%;
                     text-align: center;
