@@ -14,3 +14,4 @@
 - combining form input -> send to API [x]
 - listing results [x]
 - build sub-pages []
+- fully responsive on tablet screen []
