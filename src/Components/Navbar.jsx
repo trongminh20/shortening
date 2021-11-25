@@ -1,32 +1,26 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { logo } from './SVG-images';
 import { handleMouseLeave, handleHover, btnMouseLeave, btnHover } from './mouseEvents';
 
 export default function Navbar() {
-
+    const [showMenu, setShowMenu] = useState();
     const showNavMenu = e => {
-        if (document.getElementById('nav').style.display === "none") {
-            document.getElementById('nav').style.display = "flex";
-            console.log(document.getElementById('nav').style.display);
-        } else {
-            document.getElementById('nav').style.display = "none";
-            console.log(document.getElementById('nav').style.display);
-        }
+        setShowMenu(!showMenu);
     }
 
     const handleResponsiveNav = () => {
         if (window.innerWidth < 800) {
-            document.getElementById('nav').style.display = "none";
+            setShowMenu(false);
         }
         if (window.innerWidth >= 800) {
-            document.getElementById('nav').style.display = "flex";
+            setShowMenu(true);
         }
     }
     useEffect(() => {
         window.addEventListener("resize", function () {
             if (window.innerWidth >= 800) {
-                document.getElementById('nav').style.display = "flex";
+                setShowMenu(true);
             }
         })
     })
@@ -43,7 +37,7 @@ export default function Navbar() {
                 {logo}
             </div>
         </Link>
-        <div className="nav" id="nav">
+        {showMenu ? <div className="nav" id="nav">
             <div className="nav-menu">
                 <Link to="/features">
                     <p onMouseOver={handleHover} onMouseLeave={handleMouseLeave}>Features</p>
@@ -63,7 +57,7 @@ export default function Navbar() {
                     <button className="btn signup-btn" onMouseOver={btnHover} onMouseLeave={btnMouseLeave}>Sign Up</button>
                 </Link>
             </div>
-        </div>
+        </div> : ""}
         <div onClick={() => showNavMenu()} className="responsive-btn">
             <i className="fas fa-bars"></i>
         </div>
